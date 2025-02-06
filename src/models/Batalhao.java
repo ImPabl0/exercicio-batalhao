@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Batalhao {
-    private String nome;
+    private final String nome;
     private List<Militar> militares;
 
     public Batalhao(String nome, List<Militar> militares) {
@@ -27,7 +27,7 @@ public class Batalhao {
         if(subordinados.isEmpty()){
             System.out.printf("O militar %s foi removido com sucesso!%n", militar.getNome());
         }else{
-            System.out.printf("O militar %s foi removido, e com ele foram removidos outros %d militares, sendo eles: %s!%n", militar.getNome(), subordinados.size(), subordinados.toString());
+            System.out.printf("O militar %s foi removido, e com ele foram removidos outros %d militares, sendo eles: %s!%n", militar.getNome(), subordinados.size(), subordinados);
         }
         this.militares.remove(militar);
         for (Militar subordinado : subordinados) {
@@ -37,5 +37,17 @@ public class Batalhao {
 
     public List<Militar> getMilitares(){
         return List.copyOf(this.militares.stream().sorted().toList());
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Batalhao{" +
+                "nome='" + nome + '\'' +
+                ", militares=" + militares +
+                '}';
     }
 }

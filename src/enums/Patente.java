@@ -7,5 +7,5 @@ public enum Patente {
     sargento,
     tenente,
     capitao,
-    major;
+    major
 }

@@ -7,9 +7,9 @@ import java.util.Optional;
 import java.util.Random;
 
 public class Militar implements Comparable<Militar> {
-    private String numeroDeIdentificacao;
-    private String nome;
-    private int tempoDeServico;
+    private final String numeroDeIdentificacao;
+    private final String nome;
+    private final int tempoDeServico;
     private Patente patente;
 
     public Militar(String nome, int tempoDeServico, Patente patente) {

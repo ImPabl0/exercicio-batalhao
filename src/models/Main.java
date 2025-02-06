@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Batalhao batalhao = new Batalhao("19 BC", new ArrayList<>());
+        Batalhao batalhao = new Batalhao("19 BC");
         batalhao.adicionarMilitar(new Militar("João", 5, Patente.soldado));
         batalhao.adicionarMilitar(new Militar("Maria", 10, Patente.cabo));
         batalhao.adicionarMilitar(new Militar("José", 15, Patente.sargento));
