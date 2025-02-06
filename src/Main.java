@@ -1,8 +1,7 @@
-package models;
-
 import enums.Patente;
+import models.Batalhao;
+import models.Militar;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
